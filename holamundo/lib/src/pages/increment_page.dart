@@ -22,13 +22,30 @@ class _IncrementPageState extends State<IncrementPage>{
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(  
-        onPressed: () {
-          setState(() {
-            _conteo++;
-          });
-        },
-        child: Icon(Icons.add),
-      ));
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            FloatingActionButton(
+              onPressed: () {
+                setState(() {
+                  _conteo--;
+                });
+              },
+              child: Icon(Icons.remove),
+              heroTag: 'remove',
+            ),
+            SizedBox(width: 10),
+            FloatingActionButton(
+              onPressed: () {
+                setState(() {
+                  _conteo++;
+                });
+              },
+              child: Icon(Icons.add),
+              heroTag: 'add',
+            ),
+          ],
+        ),
+      );
   }
 }

@@ -11,6 +11,8 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Text('Numero de clics:', style: TextStyle(fontSize: 25)),
             Text('0', style: TextStyle(fontSize: 30, color: Colors.blue)),
+            FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
+            
           ],
         ),
       ),
